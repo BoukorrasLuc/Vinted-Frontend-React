@@ -21,9 +21,11 @@ import UpdateUser from "./containers/UpdateUser";
 
 function App() {
   const [userToken, setUserToken] = useState();
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchInput, setSearchInput] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8);
 
   const setUser = (token) => {
     if (token) {
@@ -76,7 +78,12 @@ function App() {
         </Route>
         <Route path="/">
           <Hero />
-          <Home data={data} />
+          <Home
+            data={data}
+            currentPage={currentPage}
+            postsPerPage={postsPerPage}
+            setCurrentPage={setCurrentPage}
+          />
         </Route>
       </Switch>
     </Router>

@@ -153,58 +153,79 @@ header {
 }
 
 //////////// HOME PAGE ////////////
+div {
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto 50px auto;
+    max-width: 1200px;
 
-.home-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: auto auto 50px auto;
-  max-width: 1200px;
-
-  .home-offer {
-    margin-top: 30px;
-
-    > div {
+    .home-offer {
       margin-top: 30px;
-      margin-right: 18px;
 
       > div {
-        display: flex;
-        align-items: center;
-        height: 30px;
+        margin-top: 30px;
+        margin-right: 18px;
 
-        span {
-          color: #999;
-          font-size: 12px;
+        > div {
+          display: flex;
+          align-items: center;
+          height: 30px;
+
+          span {
+            color: #999;
+            font-size: 12px;
+          }
+
+          .avatar-img {
+            height: 20px;
+            border-radius: 50%;
+            margin: 5px;
+          }
         }
 
-        .avatar-img {
-          height: 20px;
-          border-radius: 50%;
-          margin: 5px;
+        .offer-img {
+          height: 350px;
+          width: 230px;
+          object-fit: cover;
+        }
+        .info-product {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 10px;
+          .price {
+            color: black;
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+
+          .marque {
+            color: #999999;
+          }
         }
       }
+    }
+  }
+  .pageNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      .offer-img {
-        height: 350px;
-        width: 230px;
-        object-fit: cover;
-      }
-      .info-product {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 10px;
-        .price {
-          color: black;
-          font-size: 14px;
-          margin-bottom: 3px;
-        }
+    .pagenumbers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 30px;
+      background-color: #21adb6;
+      margin: 2px;
+      border-radius: 2px;
 
-        .marque {
-          color: #999999;
-        }
+      a {
+        color: white;
       }
     }
   }
