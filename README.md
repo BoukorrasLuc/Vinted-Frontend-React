@@ -20,6 +20,7 @@ I have used these packages :
 - A logged in user can post an ad.
 - A logged in user can purchase a product.
 - Search bar: look through the database for offer title matching the input.
+- pagination 
 
 ### future functionality
 

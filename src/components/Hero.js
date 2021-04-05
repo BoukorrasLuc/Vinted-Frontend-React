@@ -1,3 +1,6 @@
+//Import Packages
+import { Link } from "react-router-dom";
+
 // Import Images
 import heroBanner from "../assets/images/hero-banner.jpeg";
 import tear from "../assets/images/tear.svg";
@@ -10,7 +13,9 @@ const Hero = () => {
       <div>
         <div>
           <h1>Prêts à faire du tri dans vos placards ?</h1>
-          <div>Commencer à vendre</div>
+          <Link className="btn-vendre" to="/user/publish">
+            Commencer à vendre
+          </Link>
         </div>
       </div>
     </div>
