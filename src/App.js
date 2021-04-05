@@ -26,6 +26,7 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
+  const [fetchRangeValues, setFetchRangeValues] = useState([0, 10000]);
 
   const setUser = (token) => {
     if (token) {
@@ -40,13 +41,13 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://vinted-backend-luc.herokuapp.com/offers?title=${searchInput}`
+        `https://vinted-backend-luc.herokuapp.com/offers?priceMin=${fetchRangeValues[0]}&priceMax=${fetchRangeValues[1]}&title=${searchInput}`
       );
       setData(response.data);
       setIsLoading(false);
     };
     fetchData();
-  }, [searchInput]);
+  }, [searchInput, fetchRangeValues]);
 
   return isLoading ? (
     <p>Chargement en cours...</p>
@@ -56,6 +57,8 @@ function App() {
         userToken={userToken}
         setUser={setUser}
         setSearchInput={setSearchInput}
+        setFetchRangeValues={setFetchRangeValues}
+        fetchRangeValues={fetchRangeValues}
       />
       <Switch>
         <Route path="/offer/:id">

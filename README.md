@@ -13,6 +13,8 @@ I have used these packages :
 - Axios
 - JS Cookie
 - React Router Dom
+- react-range
+- node-sass
 
 ### feature already installed
 
@@ -20,12 +22,12 @@ I have used these packages :
 - A logged in user can post an ad.
 - A logged in user can purchase a product.
 - Search bar: look through the database for offer title matching the input.
-- pagination 
+- pagination offers.
+- Sort searches by price.
 
 ### future functionality
 
 - Page profile.
-- Sort searches by price.
 
 ## Screenshots
 

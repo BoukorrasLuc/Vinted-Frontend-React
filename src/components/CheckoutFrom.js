@@ -94,7 +94,15 @@ const CheckoutForm = ({ productName, price, userToken, userId }) => {
       </div>
 
       {isPaid ? (
-        <div>Merci pour votre achat.</div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Merci pour votre achat.
+        </div>
       ) : (
         <>
           <CardElement className="CardElement" />

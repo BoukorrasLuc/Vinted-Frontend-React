@@ -2,19 +2,15 @@
 import { Link } from "react-router-dom";
 
 const Home = ({ data, currentPage, postsPerPage, setCurrentPage }) => {
+  //Calculation to display the number of pages compared to the number
+  //of offers and the number of offers per page.
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = data.offers.slice(indexOfFirstPost, indexOfLastPost);
-  // console.log(data.offers); // Tableau de 8 object
-  // console.log(data);
-  console.log(data.offers.length);
-
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(data.offers.length / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-  console.log(pageNumbers);
-
   const paginate = (pageNumbers) => setCurrentPage(pageNumbers);
 
   return (

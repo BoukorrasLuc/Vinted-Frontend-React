@@ -1,10 +1,16 @@
 //Import Packages
+import PriceRange from "./PriceRange";
 import { Link } from "react-router-dom";
 
 //Import Logo
 import Vinted from "../assets/images/Vinted_logo.png";
 
-const Header = ({ setUser, userToken, setSearchInput }) => {
+const Header = ({
+  setUser,
+  userToken,
+  setSearchInput,
+  setFetchRangeValues,
+}) => {
   return (
     <header>
       <Link to="/">
@@ -20,6 +26,8 @@ const Header = ({ setUser, userToken, setSearchInput }) => {
           }}
         />
       </div>
+
+      <PriceRange setFetchRangeValues={setFetchRangeValues} />
 
       <div className="btn-header">
         {userToken ? (
