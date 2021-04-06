@@ -2,6 +2,7 @@
 import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 const Offer = ({ userToken }) => {
   const { id } = useParams();
@@ -27,7 +28,14 @@ const Offer = ({ userToken }) => {
   }, [id]);
 
   return isLoading ? (
-    <p>Chargement en cours...</p>
+    <Loader
+      type="Oval"
+      color="21adb6"
+      height={100}
+      width={100}
+      timeout={3000} //3 secs
+      className="loader"
+    />
   ) : (
     <div className="background-offer">
       <div className="offer-container">

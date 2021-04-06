@@ -15,6 +15,7 @@ I have used these packages :
 - React Router Dom
 - react-range
 - node-sass
+- react-loader-spinner
 
 ### feature already installed
 

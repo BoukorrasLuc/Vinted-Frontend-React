@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import Loader from "react-loader-spinner";
 
 // Import Components
 import Header from "./components/Header";
@@ -51,7 +52,14 @@ function App() {
   }, [searchInput, fetchRangeValues]);
 
   return isLoading ? (
-    <p>Chargement en cours...</p>
+    <Loader
+      type="Oval"
+      color="#21adb6"
+      height={100}
+      width={100}
+      timeout={3000} //3 secs
+      className="loader"
+    />
   ) : (
     <Router>
       <Header
