@@ -12,6 +12,7 @@ const Signup = ({ setUser }) => {
 
   const history = useHistory();
 
+  // we create a function which makes a request to create the user
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();

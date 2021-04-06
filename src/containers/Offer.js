@@ -7,9 +7,10 @@ const Offer = ({ userToken }) => {
   const { id } = useParams();
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
   const history = useHistory();
 
-  //request who retrieves the data from the offer
+  //We make a request to retrieve the data of offers
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -35,6 +36,9 @@ const Offer = ({ userToken }) => {
           <div className="price">
             {data.product_price.toFixed(2).replace(".", ",")} €
           </div>
+
+          {/* we perform a .map to display the details of the offers */}
+
           {data.product_details.map((elem, index) => {
             return (
               <div className="info-product" key={index}>

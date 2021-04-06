@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Home = ({ data, currentPage, postsPerPage, setCurrentPage }) => {
   //Calculation to display the number of pages compared to the number
   //of offers and the number of offers per page.
+
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = data.offers.slice(indexOfFirstPost, indexOfLastPost);
@@ -16,6 +17,7 @@ const Home = ({ data, currentPage, postsPerPage, setCurrentPage }) => {
   return (
     <div>
       <div className="home-container">
+        {/* we perform a .map to display the data of the offers  */}
         {currentPosts.map((offer) => {
           return (
             <Link
@@ -62,7 +64,9 @@ const Home = ({ data, currentPage, postsPerPage, setCurrentPage }) => {
           );
         })}
       </div>
+
       <div className="pageNumber">
+        {/* we perform a .map to display the number of pages */}
         {pageNumbers.map((number) => (
           <div key={number} className="pagenumbers">
             <a onClick={() => paginate(number)} href="!#">

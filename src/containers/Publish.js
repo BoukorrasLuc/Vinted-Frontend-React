@@ -17,6 +17,8 @@ const Publish = ({ userToken }) => {
   const [etat, setEtat] = useState("");
   const [location, setLocation] = useState("");
 
+  // we perform an onSubmit function to send the data of the ad we want to publish
+
   const onSubmit = async (event) => {
     try {
       event.preventDefault();

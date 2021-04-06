@@ -10,6 +10,7 @@ const Login = ({ setUser }) => {
 
   const history = useHistory();
 
+  // we create a function which makes a request to find the user
   const onSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -35,6 +36,9 @@ const Login = ({ setUser }) => {
   return (
     <div className="login-container">
       <h2 className="title">Se connecter</h2>
+
+      {/* we create a form to retrieve the data we need for authentication */}
+
       <form onSubmit={onSubmit}>
         <div className="email">
           <input

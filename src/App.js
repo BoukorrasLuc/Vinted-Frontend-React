@@ -28,6 +28,7 @@ function App() {
   const [postsPerPage] = useState(8);
   const [fetchRangeValues, setFetchRangeValues] = useState([0, 10000]);
 
+  // we store the token 7 days in the cookie
   const setUser = (token) => {
     if (token) {
       Cookies.set("userToken", token, { expires: 7 });
