@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "MaisonNeueWEB-Book";
+  src: local("MaisonNeueWEB-Book"),
+    url(./assets/Font/MaisonNeueWEB-Book.woff2) format("woff2");
+}
+
+//////////// LOADER  ////////////
 .loader {
   display: flex;
   justify-content: center;
@@ -29,6 +36,7 @@ header {
       background: none;
       border: none;
       font-size: 16px;
+      font-family: "MaisonNeueWEB-Book";
       color: #999;
       &:focus {
         outline: none;
@@ -50,6 +58,7 @@ header {
       padding: 0 10px;
       font-size: 16px;
       font-weight: 300;
+      font-family: "MaisonNeueWEB-Book";
       border-radius: 5px;
       border: 1px solid #21adb6;
       &:hover {
@@ -73,6 +82,7 @@ header {
       padding: 8px;
       font-size: 16px;
       font-weight: 300;
+      font-family: "MaisonNeueWEB-Book";
       border-radius: 5px;
       color: #21adb6;
       background: none;
@@ -134,12 +144,14 @@ header {
       h1 {
         font-size: 34px;
         font-weight: 500;
+        font-family: "MaisonNeueWEB-Book";
       }
       .btn-vendre {
         width: 180px;
         text-align: center;
         font-size: 16px;
         font-weight: 300;
+        font-family: "MaisonNeueWEB-Book";
         color: #fff;
         padding: 10px;
         background-color: #21adb6;
@@ -227,9 +239,16 @@ div {
       background-color: #21adb6;
       margin: 2px;
       border-radius: 2px;
+      &:hover {
+        color: #21adb6;
+        background-color: #fff;
+      }
 
       a {
         color: white;
+        &:hover {
+          color: #21adb6;
+        }
       }
     }
   }
@@ -292,15 +311,18 @@ div {
         border-top: solid #999999 1px;
         margin: 50px 40px;
         padding-top: 20px;
+        font-family: "MaisonNeueWEB-Book";
 
         .info-seller,
         .info-products {
           font-size: 16px;
+          font-family: "MaisonNeueWEB-Book";
           height: 60px;
         }
         .info-seller {
           margin-top: 10px;
           font-weight: bold;
+          font-family: "MaisonNeueWEB-Book";
         }
         .info-products {
           width: 350px;
@@ -308,6 +330,7 @@ div {
           margin: 10px 0px;
           color: #a8a8a8;
           font-size: 80%;
+          font-family: "MaisonNeueWEB-Book";
           word-wrap: break-word;
         }
         .info-sellers {
@@ -334,6 +357,7 @@ div {
           margin-left: 25px;
           font-size: 16px;
           font-weight: 300;
+          font-family: "MaisonNeueWEB-Book";
           border-radius: 5px;
           border: 1px solid #21adb6;
           background-color: #21adb6;
@@ -363,6 +387,7 @@ div {
 
   .title {
     margin-bottom: 30px;
+    font-family: "MaisonNeueWEB-Book";
   }
   .email,
   .password {
@@ -372,6 +397,7 @@ div {
     padding: 5px;
     input {
       width: 100%;
+      font-family: "MaisonNeueWEB-Book";
     }
   }
 
@@ -381,6 +407,7 @@ div {
     justify-content: center;
     color: red;
     font-size: 10px;
+    font-family: "MaisonNeueWEB-Book";
     margin-bottom: 10px;
   }
   input:focus {
@@ -394,6 +421,7 @@ div {
     margin-top: 50px;
     font-size: 16px;
     font-weight: 300;
+    font-family: "MaisonNeueWEB-Book";
     border-radius: 5px;
     border: 1px solid #21adb6;
     background-color: #21adb6;
@@ -406,6 +434,7 @@ div {
   span {
     color: #2cb1ba;
     font-size: 12px;
+    font-family: "MaisonNeueWEB-Book";
     margin-top: 20px;
   }
 }
@@ -432,6 +461,7 @@ div {
 
     .title {
       margin-bottom: 30px;
+      font-family: "MaisonNeueWEB-Book";
     }
     .username,
     .email,
@@ -440,6 +470,7 @@ div {
       border-bottom: #fcced3 solid 1px;
       margin-bottom: 20px;
       padding: 5px;
+      font-family: "MaisonNeueWEB-Book";
     }
     .email {
       .email-error {
@@ -448,6 +479,7 @@ div {
         justify-content: center;
         color: red;
         font-size: 10px;
+        font-family: "MaisonNeueWEB-Book";
         margin-top: 10px;
       }
     }
@@ -458,8 +490,10 @@ div {
     width: 280px;
     font-size: 12px;
     color: #999999;
+
     div {
       color: #a2a2a2;
+      font-family: "MaisonNeueWEB-Book";
     }
 
     .checkbox {
@@ -467,6 +501,7 @@ div {
       align-items: center;
       justify-content: space-around;
       font-size: 16px;
+      font-family: "MaisonNeueWEB-Book";
       margin-bottom: 20px;
       color: #a2a2a2;
     }
@@ -479,6 +514,7 @@ div {
     margin-top: 50px;
     font-size: 16px;
     font-weight: 300;
+    font-family: "MaisonNeueWEB-Book";
     border-radius: 5px;
     border: 1px solid #21adb6;
     background-color: #21adb6;
@@ -491,6 +527,7 @@ div {
   span {
     color: #2cb1ba;
     font-size: 12px;
+    font-family: "MaisonNeueWEB-Book";
     margin-top: 20px;
   }
 }
@@ -741,6 +778,99 @@ div {
       &:hover {
         background-color: #01d076;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+//////////// PROFILE USER  ////////////
+
+.container-profile {
+  border: #21adb6 solid 1px;
+  width: 1280px;
+  margin: 50px auto;
+  // display: flex;
+  // align-items: flex-start;
+  // font-family: "MaisonNeueWEB-Book";
+  .section1 {
+    display: flex;
+    align-items: flex-start;
+    .image {
+      border: #a721b6 solid 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-section {
+      border: #b62121 solid 1px;
+      font-family: "MaisonNeueWEB-Book";
+      height: 400px;
+      width: 400px;
+
+      > div {
+        color: black;
+        margin: 5px 50px;
+        border: #19eb5f solid 1px;
+        font-size: 24px;
+        font-family: "MaisonNeueWEB-Book";
+      }
+      .A-propos {
+        border: #5521b6 solid 1px;
+        font-size: 12px;
+        color: #a2a2a2;
+        margin-top: 50px;
+        font-family: "MaisonNeueWEB-Book";
+        font-weight: bold;
+      }
+      .info {
+        font-size: 16px;
+        color: #4d4d4d;
+        font-family: "MaisonNeueWEB-Book";
+        font-weight: bold;
+      }
+      .biographie {
+        font-size: 16px;
+        color: #a2a2a2;
+        font-family: "MaisonNeueWEB-Book";
+      }
+    }
+  }
+
+  .offer-section {
+    border: rgb(0, 0, 0) solid 1px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .offer-card {
+      border: rgb(65, 225, 100) solid 1px;
+      margin: 20px;
+
+      .offer-img {
+        height: 350px;
+        width: 230px;
+        object-fit: cover;
+      }
+      .info-product {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px;
+        .price {
+          color: black;
+          font-size: 14px;
+          margin-bottom: 3px;
+        }
+        .taille {
+          font-size: 14px;
+        }
+        .marque {
+          color: #999999;
+          font-size: 14px;
+        }
       }
     }
   }

@@ -18,10 +18,20 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import Publish from "./containers/Publish";
 import Payment from "./containers/Payment";
-import UpdateUser from "./containers/UpdateUser";
+import ProfileUser from "./containers/ProfileUser";
+
+// Import Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faMapMarkerAlt,
+  faClock,
+  faRss,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faMapMarkerAlt, faClock, faRss);
 
 function App() {
   const [userToken, setUserToken] = useState();
+  const [userAccount, setUserAccount] = useState();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchInput, setSearchInput] = useState("");
@@ -30,6 +40,7 @@ function App() {
   const [fetchRangeValues, setFetchRangeValues] = useState([0, 10000]);
 
   // we store the token 7 days in the cookie
+
   const setUser = (token) => {
     if (token) {
       Cookies.set("userToken", token, { expires: 7 });
@@ -74,7 +85,7 @@ function App() {
           <Offer userToken={userToken} />
         </Route>
         <Route path="/user/login">
-          <Login setUser={setUser} />
+          <Login setUser={setUser} setUserAccount={setUserAccount} />
         </Route>
         <Route path="/signup">
           <Signup setUser={setUser} />
@@ -82,8 +93,13 @@ function App() {
         <Route path="/user/publish">
           <Publish userToken={userToken} />
         </Route>
-        <Route path="/user/update/">
-          <UpdateUser userToken={userToken} />
+        <Route path="/user/">
+          <ProfileUser
+            userToken={userToken}
+            setUser={setUser}
+            userAccount={userAccount}
+            data={data}
+          />
         </Route>
         <Route path="/payment">
           <Payment />
@@ -91,6 +107,7 @@ function App() {
         <Route path="/">
           <Hero />
           <Home
+            userToken={userToken}
             data={data}
             currentPage={currentPage}
             postsPerPage={postsPerPage}

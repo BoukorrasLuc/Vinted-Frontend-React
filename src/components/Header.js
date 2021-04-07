@@ -32,7 +32,7 @@ const Header = ({
       <div className="btn-header">
         {userToken ? (
           <div>
-            <Link className="btn-profile" to="/user/update">
+            <Link className="btn-profile" to="/user">
               Profile
             </Link>
             <button className="btn-deconnecter" onClick={() => setUser(null)}>

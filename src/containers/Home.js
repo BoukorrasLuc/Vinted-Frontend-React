@@ -69,9 +69,7 @@ const Home = ({ data, currentPage, postsPerPage, setCurrentPage }) => {
         {/* we perform a .map to display the number of pages */}
         {pageNumbers.map((number) => (
           <div key={number} className="pagenumbers">
-            <a onClick={() => paginate(number)} href="!#">
-              {number}
-            </a>
+            <a onClick={() => paginate(number)}>{number}</a>
           </div>
         ))}
       </div>

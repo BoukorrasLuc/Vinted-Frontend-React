@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import axios from "axios";
 
-const Login = ({ setUser }) => {
+const Login = ({ setUser, setUserAccount }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
@@ -24,6 +24,7 @@ const Login = ({ setUser }) => {
       );
       if (response.data.token) {
         setUser(response.data.token);
+        setUserAccount(response.data);
         history.push("/");
       }
     } catch (error) {
