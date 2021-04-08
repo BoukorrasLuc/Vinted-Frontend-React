@@ -18,7 +18,6 @@ const ProfileUser = ({ userToken, userAccount, data }) => {
       newtabUserOffer.push(data.offers[i]);
     }
   }
-  console.log(newtabUserOffer);
 
   return userToken ? (
     <div className="container-profile">
@@ -36,6 +35,55 @@ const ProfileUser = ({ userToken, userAccount, data }) => {
 
         <div className="profile-section">
           <div>{username}</div>
+          <div className="évalutions">
+            <FontAwesomeIcon
+              icon="star"
+              style={{
+                height: "15px",
+                width: "15px",
+                color: "Yellow",
+                marginRight: "1px",
+              }}
+            />
+            <FontAwesomeIcon
+              icon="star"
+              style={{
+                height: "15px",
+                width: "15px",
+                color: "Yellow",
+                marginRight: "1px",
+              }}
+            />
+            <FontAwesomeIcon
+              icon="star"
+              style={{
+                height: "15px",
+                width: "15px",
+                color: "Yellow",
+                marginRight: "1px",
+              }}
+            />
+            <FontAwesomeIcon
+              icon="star"
+              style={{
+                height: "15px",
+                width: "15px",
+                color: "Yellow",
+                marginRight: "1px",
+              }}
+            />
+            <FontAwesomeIcon
+              icon="star"
+              style={{
+                height: "15px",
+                width: "15px",
+                color: "Yellow",
+                marginRight: "1px",
+              }}
+            />
+            &nbsp;&nbsp;X évalutions
+          </div>
+
           <div className="A-propos">À propos :</div>
           <div className="info">
             <FontAwesomeIcon
@@ -68,6 +116,8 @@ const ProfileUser = ({ userToken, userAccount, data }) => {
       </div>
 
       <div className="offer-section">
+        <h1>Vos Annonces</h1>
+
         {newtabUserOffer.map((offer, index) => {
           return (
             <div key={index} className="offer-card">

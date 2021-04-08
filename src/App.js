@@ -26,8 +26,9 @@ import {
   faMapMarkerAlt,
   faClock,
   faRss,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faMapMarkerAlt, faClock, faRss);
+library.add(faMapMarkerAlt, faClock, faRss, faStar);
 
 function App() {
   const [userToken, setUserToken] = useState();

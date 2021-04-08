@@ -786,24 +786,18 @@ div {
 //////////// PROFILE USER  ////////////
 
 .container-profile {
-  border: #21adb6 solid 1px;
   width: 1280px;
   margin: 50px auto;
-  // display: flex;
-  // align-items: flex-start;
-  // font-family: "MaisonNeueWEB-Book";
   .section1 {
     display: flex;
     align-items: flex-start;
     .image {
-      border: #a721b6 solid 1px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .profile-section {
-      border: #b62121 solid 1px;
       font-family: "MaisonNeueWEB-Book";
       height: 400px;
       width: 400px;
@@ -811,15 +805,21 @@ div {
       > div {
         color: black;
         margin: 5px 50px;
-        border: #19eb5f solid 1px;
         font-size: 24px;
         font-family: "MaisonNeueWEB-Book";
       }
+      .évalutions {
+        font-size: 20px;
+        font-family: "MaisonNeueWEB-Book";
+        margin-top: 5px;
+
+        display: flex;
+        align-items: center;
+      }
       .A-propos {
-        border: #5521b6 solid 1px;
         font-size: 12px;
         color: #a2a2a2;
-        margin-top: 50px;
+        margin-top: 30px;
         font-family: "MaisonNeueWEB-Book";
         font-weight: bold;
       }
@@ -833,20 +833,26 @@ div {
         font-size: 16px;
         color: #a2a2a2;
         font-family: "MaisonNeueWEB-Book";
+        height: 180px;
       }
     }
   }
 
   .offer-section {
-    border: rgb(0, 0, 0) solid 1px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
+    h1 {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #a2a2a2;
+      font-family: "MaisonNeueWEB-Book";
+    }
+
     .offer-card {
-      border: rgb(65, 225, 100) solid 1px;
       margin: 20px;
 
       .offer-img {
