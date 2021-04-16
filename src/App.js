@@ -31,7 +31,7 @@ import {
 library.add(faMapMarkerAlt, faClock, faRss, faStar);
 
 function App() {
-  const [userToken, setUserToken] = useState();
+  const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
   const [userAccount, setUserAccount] = useState();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
