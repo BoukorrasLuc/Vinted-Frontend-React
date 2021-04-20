@@ -1,6 +1,6 @@
 # Vinted Clone
 
-- The project is under construction
+<img src= https://www.madmoizelle.com/wp-content/uploads/2020/02/vinted-categorie-maison.jpg height="180px" />
 
 ## About this project
 
@@ -25,11 +25,10 @@ I have used these packages :
 - Search bar: look through the database for offer title matching the input.
 - pagination offers.
 - Sort searches by price.
-
-### future functionality
-
 - Page profile.
+
+[click here to visit](https://vinted-luc.netlify.app/)
 
 ## Screenshots
 
-- Soon...
+![Screenshot GIF](./Preview/Vinted.gif)
